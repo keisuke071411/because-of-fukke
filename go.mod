@@ -1,4 +1,4 @@
-module example.com/go-mod-test
+module github.com/keisuke071411/go_slack_bot
 
 go 1.17
 
