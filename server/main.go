@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/joho/godotenv"
-	// "github.com/slack-go/slack"
+	"github.com/slack-go/slack"
 )
 
 func main() {
@@ -15,14 +15,12 @@ func main() {
 		fmt.Println(envErr)
 	}
 
-	message := os.Getenv("SLACK_BOT_TOKEN")
-	fmt.Println(message + "sample")
+	tkn := os.Getenv("SLACK_BOT_TOKEN")
+	c := slack.New(tkn)
 
-	// c := slack.New(tkn)
-
-	// 	_, _, err := c.PostMessage("#three-sacred-treasures", slack.MsgOptionText("Hello World", true))
-	// if err != nil {
-	// 	panic(err)
-	// }
+	_, _, err := c.PostMessage("#three-sacred-treasures", slack.MsgOptionText("Hello World", true))
+	if err != nil {
+		panic(err)
+	}
 }
 
