@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	envErr := godotenv.Load(fmt.Sprintf("../%s.env", os.Getenv("GO_ENV")))
+	envErr := godotenv.Load(fmt.Sprintf("./%s.env", os.Getenv("GO_ENV")))
 	
 	if envErr != nil {
 		fmt.Println(envErr)
