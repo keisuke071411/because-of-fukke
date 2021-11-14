@@ -1,4 +1,4 @@
-module github.com/keisuke071411/go_slack_bot
+module github.com/keisuke071411/because-of-fukke
 
 go 1.17
 
