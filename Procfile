@@ -1,1 +1,1 @@
-web: bin/go_practice
+web: bin/because-of-fukke
