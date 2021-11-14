@@ -1,1 +1,1 @@
-web: bin/because-of-fukke
+web: ls bin && bin/because-of-fukke
