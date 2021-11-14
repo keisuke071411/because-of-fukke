@@ -1,1 +1,1 @@
-web: bin/because-of-fukke
+web: go run main.go
