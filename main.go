@@ -73,6 +73,7 @@ func main() {
 						reg_name := regexp.MustCompile(`ふっけ`)
 						reg_factor := regexp.MustCompile(`のせい`)
 						reg_special := regexp.MustCompile(`ありがとう`)
+						reg_nice := regexp.MustCompile(`さすが`)
 
 						if txt := reg_name.FindString(event.Text); txt != "" {
 							api.AddReaction("fukke0906",ref)
@@ -86,6 +87,11 @@ func main() {
 
 						if txt := reg_special.FindString(event.Text); txt != "" {
 							api.AddReaction("lovefukke0906",ref)
+							return
+						}
+
+						if txt := reg_nice.FindString(event.Text); txt != "" {
+							api.AddReaction("aiai4849",ref)
 							return
 						}
 				}
